@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.font-size-small{
+    font-size: .8rem;
+}
+
 section.sfondo .green{
     background-color: #009688;
     height: 15vh;
@@ -26,7 +30,7 @@ div.window{
 div.window div.chat-list{
     width: 35%;
     height: 100%;
-    background-color: green;
+    background-color: #ffffff;
 }
 
 div.window div.chat{
@@ -38,6 +42,21 @@ div.window div.chat{
 div.profilo{
     height: 50px;
     background-color: #ffffff;
+}
+
+div.profilo-img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+div.profilo-utilita{
+    color: #b1b1b1;
+}
+
+div.profilo-punti{
+    font-size: .4rem;
 }
 
 div.notifiche{
@@ -53,7 +72,19 @@ div.cerchio-notifiche{
     color: #8edafc;
 }
 
+div.testo-notifiche{
+    font-size: .8rem;
+}
+
 div.ricerca{
     height: 40px;
     background-color: #ffffff;
+}
+
+div.contatti{
+    overflow-y: scroll;
+}
+
+div.contatti ul li{
+    list-style: none;
 }
