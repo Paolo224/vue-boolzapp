@@ -4,3 +4,22 @@
     box-sizing: border-box;
 }
 
+section.sfondo .green{
+    background-color: #009688;
+    height: 15vh;
+}
+
+section.sfondo .gray{
+    background-color: #d9dbd5;
+    height: 85vh;
+}
+
+div.window{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    background-color: aqua;
+    opacity: .8;
+    bottom: 13%;
+}
