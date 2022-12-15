@@ -19,7 +19,41 @@ div.window{
     width: 80%;
     margin: 0 auto;
     height: 500px;
-    background-color: aqua;
-    opacity: .8;
     bottom: 13%;
+    display: flex;
+}
+
+div.window div.chat-list{
+    width: 35%;
+    height: 100%;
+    background-color: green;
+}
+
+div.window div.chat{
+    width: 65%;
+    height: 100%;
+    background-color: red;
+}
+
+div.profilo{
+    height: 50px;
+    background-color: #ffffff;
+}
+
+div.notifiche{
+    height: 60px;
+    background-color: #8edafc;
+}
+
+div.cerchio-notifiche{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #8edafc;
+}
+
+div.ricerca{
+    height: 40px;
+    background-color: #ffffff;
 }
