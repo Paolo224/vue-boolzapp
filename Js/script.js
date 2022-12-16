@@ -3,6 +3,7 @@ const { crateApp } = Vue
 .createApp({
     data(){
         return {
+            newMess : '',
             currentIndex : 0,
             contacts: [
                 {
@@ -173,6 +174,11 @@ const { crateApp } = Vue
     methods : {
         messaggiContatto(item){
             this.currentIndex = item;
+        },
+
+        userMessPush(element){
+            this.contacts[this.currentIndex].messages.push({ date : '10/03/2021 15:34:00', message : element, status : 'sent'});
+            this.newMess = '';
         },
     }
 }).mount('#app');
