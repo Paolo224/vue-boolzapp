@@ -3,6 +3,7 @@ const { crateApp } = Vue
 .createApp({
     data(){
         return {
+            currentIndex : 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -170,6 +171,8 @@ const { crateApp } = Vue
     },
 
     methods : {
-        
+        messaggiContatto(item){
+            this.currentIndex = item;
+        },
     }
 }).mount('#app');

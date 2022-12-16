@@ -58,7 +58,7 @@
                     <div class="contatti">
                         <ul class="p-0">
                             <li class="p-2 d-flex justify-content-between align-items-center bg-light"
-                                v-for="element in contacts">
+                                v-for="(element, index) in contacts" @click="messaggiContatto(index)">
                                 <div class="d-flex align-items-center">
                                     <div class="profilo-img">
                                         <img class="img-fluid" :src="'./img/avatar' + element.avatar + '.jpg'" alt="img">
@@ -87,11 +87,11 @@
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="d-flex align-items-center">
                                     <div class="profilo-img">
-                                        <img class="img-fluid" src="./img/avatar_1.jpg" alt="img">
+                                        <img class="img-fluid" :src="'./img/avatar' + contacts[currentIndex].avatar + '.jpg'" alt="img">
                                     </div>
                                     <div>
                                         <p class="m-0 ps-2 fw-bold">
-                                            Nome
+                                            {{contacts[currentIndex].name}}
                                         </p>
                                         <p class="m-0 ps-2 text-muted font-size-small">
                                             Ultimo accesso oggi alle 12.00
@@ -111,16 +111,13 @@
                         </div>
                     </div>
                     <div class="zona-messaggi px-5 py-2">
-                        <div class="message message-sent">
-                            Ciao Bro
-                        </div>
-                        <div class="message message-receive">
-                            Ue fraté
+                        <div v-for="message in contacts[currentIndex].messages" class="message" :class="message.status === 'sent' ? 'message-sent' : 'message-receive'">
+                            {{message.message}}
                         </div>
                     </div>
                     <div class="profilo d-flex justify-content-between align-items-center p-2">
                         <i class="fa-regular fa-face-smile ps-3 text-muted"></i>
-                        <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio">
+                        <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio" v-model="newMess">
                         <i class="fa-solid fa-microphone pe-3 text-muted"></i>
                     </div>
                 </div>

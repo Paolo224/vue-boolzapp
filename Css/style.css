@@ -20,10 +20,15 @@ body{
         );
 }
 
+div#app{
+    height: 100%;
+    display: flex;
+}
+
 div.window{
     width: 80%;
     margin: auto;
-    height: 600px;
+    height: 90%;
     display: flex;
 }
 
@@ -102,6 +107,7 @@ div.zona-messaggi{
     padding: 1rem;
     border-radius: .7rem;
     padding: .8rem;
+    margin-bottom: .5rem;
     width: 250px;
 }
 
