@@ -3,6 +3,7 @@ const { crateApp } = Vue
 .createApp({
     data(){
         return {
+            ricerca : '',
             newMess : '',
             currentIndex : 0,
             contacts: [
@@ -180,6 +181,16 @@ const { crateApp } = Vue
             this.contacts[this.currentIndex].messages.push({ date : '10/03/2021 15:34:00', message : element, status : 'sent'});
             this.newMess = '';
             setTimeout(() => {this.contacts[this.currentIndex].messages.push({ date : '10/03/2021 15:34:00', message : 'OK!', status : 'receive'})}, 1000);
+        },
+
+        ricercaContatti(){
+            for(let i = 0; i < this.contacts.length; i++){
+                if(this.contacts[i].name.includes(this.ricerca)){
+                    this.contacts[i].visible = true;
+                } else{
+                    this.contacts[i].visible = false;
+                }
+            }
         },
     }
 }).mount('#app');
