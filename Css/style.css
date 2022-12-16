@@ -8,22 +8,22 @@
     font-size: .8rem;
 }
 
-section.sfondo .green{
-    background-color: #009688;
-    height: 15vh;
-}
-
-section.sfondo .gray{
-    background-color: #d9dbd5;
-    height: 85vh;
+body{
+    overflow: hidden;
+    height: 100vh;
+    background-image: 
+        linear-gradient(to bottom,
+        #009688 0px,
+        #009688 15vh,
+        #dddbd1 15vh,
+        #d2dbdc 100%
+        );
 }
 
 div.window{
-    position: relative;
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
     height: 600px;
-    bottom: 13%;
     display: flex;
 }
 
@@ -36,7 +36,7 @@ div.window div.chat-list{
 div.window div.chat{
     width: 65%;
     height: 100%;
-    background-image: url(../img/mine.jpg);
+    background-color: crimson;
 }
 
 div.profilo{
@@ -93,14 +93,22 @@ div.contatti ul li{
     list-style: none;
 }
 
+div.zona-messaggi{
+    height: calc(100% - 100px);
+    background-image: url(../img/mine.jpg);
+}
+
 .message{
     padding: 1rem;
+    border-radius: .7rem;
+    padding: .8rem;
+    width: 250px;
 }
 
 .message-sent{
     background-color: #d5f9ba;
     float: right;
-    clear: both;
+    clear: both; 
 }
 
 .message-receive{

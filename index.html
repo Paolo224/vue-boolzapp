@@ -1,126 +1,143 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Boolzapp</title>
         <!-- BOOTSTRAP -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <!-- LINK CSS -->
         <link rel="stylesheet" href="./Css/style.css">
         <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     </head>
+
     <body>
         <div id="app">
-            <section class="sfondo">
-                <div class="green"></div>
-                <div class="gray">
-                    <div class="window">
-                        <div class="chat-list d-flex flex-column">
-                            <div class="profilo d-flex justify-content-between align-items-center p-2 border">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="profilo-img">
-                                        <img class="img-fluid" src="./img/avatar_io.jpg" alt="Io">
-                                    </div>
-                                    <p class="m-0 ps-2 fw-bold">
-                                        Sofia
-                                    </p>
-                                </div>
-                                <div class="profilo-utilita d-flex align-items-center">
-                                    <i class="fa-solid fa-circle-notch ps-1 pe-1"></i>
-                                    <i class="fa-solid fa-message ps-2 pe-2"></i>
-                                    <div class="profilo-punti d-flex flex-column ps-1 pe-1">
-                                        <i class="fa-solid fa-circle"></i>
-                                        <i class="fa-solid fa-circle pt-1 pb-1"></i>
-                                        <i class="fa-solid fa-circle"></i>
-                                    </div>
-                                </div>
+            <div class="window">
+                <div class="chat-list d-flex flex-column">
+                    <div class="profilo d-flex justify-content-between align-items-center p-2 border">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="profilo-img">
+                                <img class="img-fluid" src="./img/avatar_io.jpg" alt="Io">
                             </div>
-                            <div class="notifiche d-flex align-items-center p-2">
-                                <div class="cerchio-notifiche d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-bell-slash"></i>
-                                </div>
-                                <div class="testo-notifiche">
-                                    <p class="m-0 ps-2 fw-bold">
-                                        Ricevi notifiche di nuovi messaggi
-                                    </p>
-                                    <p class="m-0 ps-2 text-decoration-underline text-muted">
-                                        Attiva notifiche desktop
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ricerca justify-content-center align-items-center d-flex p-2">
-                                <i class="fa-solid fa-magnifying-glass pe-2"></i>
-                                <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
-                            </div>
-                            <div class="contatti">
-                                <ul class="p-0">
-                                    <li class="p-2 d-flex justify-content-between align-items-center bg-light" v-for="element in contacts">
-                                        <div class="d-flex align-items-center">
-                                            <div class="profilo-img">
-                                                <img class="img-fluid" :src="'./img/avatar' + element.avatar + '.jpg'" alt="img">
-                                            </div>
-                                            <div>
-                                                <p class="m-0 ps-2 fw-bold">
-                                                    {{element.name}}
-                                                </p>
-                                                <p class="m-0 ps-2 text-decoration-underline text-muted font-size-small">
-                                                    Ultimo messaggio inviato
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start">
-                                            <p class="font-size-small">
-                                                12.00
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            <p class="m-0 ps-2 fw-bold">
+                                Sofia
+                            </p>
                         </div>
-                        <div class="chat d-flex flex-column justify-content-between">
-                            <div class="profilo d-flex justify-content-between align-items-center p-2">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <div class="profilo-img">
-                                            <img class="img-fluid" src="./img/avatar_1.jpg" alt="img">
-                                        </div>
-                                        <div>
-                                            <p class="m-0 ps-2 fw-bold">
-                                                Nome
-                                            </p>
-                                            <p class="m-0 ps-2 text-muted font-size-small">
-                                                Ultimo accesso oggi alle 12.00
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="profilo-utilita d-flex align-items-center">
-                                    <i class="fa-solid fa-magnifying-glass ps-1 pe-1"></i>
-                                    <i class="fa-solid fa-paperclip ps-2 pe-2"></i>
-                                    <div class="profilo-punti d-flex flex-column ps-1 pe-1">
-                                        <i class="fa-solid fa-circle"></i>
-                                        <i class="fa-solid fa-circle pt-1 pb-1"></i>
-                                        <i class="fa-solid fa-circle"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="profilo d-flex justify-content-between align-items-center p-2">
-                                <i class="fa-regular fa-face-smile ps-3 text-muted"></i>
-                                <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio">
-                                <i class="fa-solid fa-microphone pe-3 text-muted"></i>
+                        <div class="profilo-utilita d-flex align-items-center">
+                            <i class="fa-solid fa-circle-notch ps-1 pe-1"></i>
+                            <i class="fa-solid fa-message ps-2 pe-2"></i>
+                            <div class="profilo-punti d-flex flex-column ps-1 pe-1">
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle pt-1 pb-1"></i>
+                                <i class="fa-solid fa-circle"></i>
                             </div>
                         </div>
                     </div>
+                    <div class="notifiche d-flex align-items-center p-2">
+                        <div class="cerchio-notifiche d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="testo-notifiche">
+                            <p class="m-0 ps-2 fw-bold">
+                                Ricevi notifiche di nuovi messaggi
+                            </p>
+                            <p class="m-0 ps-2 text-decoration-underline text-muted">
+                                Attiva notifiche desktop
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ricerca justify-content-center align-items-center d-flex p-2">
+                        <i class="fa-solid fa-magnifying-glass pe-2"></i>
+                        <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                    <div class="contatti">
+                        <ul class="p-0">
+                            <li class="p-2 d-flex justify-content-between align-items-center bg-light"
+                                v-for="element in contacts">
+                                <div class="d-flex align-items-center">
+                                    <div class="profilo-img">
+                                        <img class="img-fluid" :src="'./img/avatar' + element.avatar + '.jpg'" alt="img">
+                                    </div>
+                                    <div>
+                                        <p class="m-0 ps-2 fw-bold">
+                                            {{element.name}}
+                                        </p>
+                                        <p class="m-0 ps-2 text-decoration-underline text-muted font-size-small">
+                                            Ultimo messaggio inviato
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start">
+                                    <p class="font-size-small">
+                                        12.00
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                
-            </section>
+                <div class="chat">
+                    <div class="contatto-attuale">
+                        <div class="profilo d-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="profilo-img">
+                                        <img class="img-fluid" src="./img/avatar_1.jpg" alt="img">
+                                    </div>
+                                    <div>
+                                        <p class="m-0 ps-2 fw-bold">
+                                            Nome
+                                        </p>
+                                        <p class="m-0 ps-2 text-muted font-size-small">
+                                            Ultimo accesso oggi alle 12.00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profilo-utilita d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass ps-1 pe-1"></i>
+                                <i class="fa-solid fa-paperclip ps-2 pe-2"></i>
+                                <div class="profilo-punti d-flex flex-column ps-1 pe-1">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <i class="fa-solid fa-circle pt-1 pb-1"></i>
+                                    <i class="fa-solid fa-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zona-messaggi px-5 py-2">
+                        <div class="message message-sent">
+                            Ciao Bro
+                        </div>
+                        <div class="message message-receive">
+                            Ue fraté
+                        </div>
+                    </div>
+                    <div class="profilo d-flex justify-content-between align-items-center p-2">
+                        <i class="fa-regular fa-face-smile ps-3 text-muted"></i>
+                        <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone pe-3 text-muted"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         </div>
 
         <!-- LINK JAVA SCRIPT -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./Js/script.js"></script>
     </body>
+
 </html>
+
+<!-- <div class="profilo d-flex justify-content-between align-items-center p-2">
+    <i class="fa-regular fa-face-smile ps-3 text-muted"></i>
+    <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio">
+    <i class="fa-solid fa-microphone pe-3 text-muted"></i>
+</div> -->
