@@ -179,6 +179,7 @@ const { crateApp } = Vue
         userMessPush(element){
             this.contacts[this.currentIndex].messages.push({ date : '10/03/2021 15:34:00', message : element, status : 'sent'});
             this.newMess = '';
+            setTimeout(() => {this.contacts[this.currentIndex].messages.push({ date : '10/03/2021 15:34:00', message : 'OK!', status : 'receive'})}, 1000);
         },
     }
 }).mount('#app');
