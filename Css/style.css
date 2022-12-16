@@ -22,7 +22,7 @@ div.window{
     position: relative;
     width: 80%;
     margin: 0 auto;
-    height: 500px;
+    height: 600px;
     bottom: 13%;
     display: flex;
 }
@@ -36,12 +36,16 @@ div.window div.chat-list{
 div.window div.chat{
     width: 65%;
     height: 100%;
-    background-color: red;
+    background-image: url(../img/mine.jpg);
 }
 
 div.profilo{
     height: 50px;
-    background-color: #ffffff;
+    background-color: #f3eeea;
+}
+
+.border{
+    border-right: 1px solid grey;
 }
 
 div.profilo-img{
@@ -56,7 +60,7 @@ div.profilo-utilita{
 }
 
 div.profilo-punti{
-    font-size: .4rem;
+    font-size: .25rem;
 }
 
 div.notifiche{
@@ -87,4 +91,20 @@ div.contatti{
 
 div.contatti ul li{
     list-style: none;
+}
+
+.message{
+    padding: 1rem;
+}
+
+.message-sent{
+    background-color: #d5f9ba;
+    float: right;
+    clear: both;
+}
+
+.message-receive{
+    background-color: #ffffff;
+    float: left;
+    clear: both;
 }
