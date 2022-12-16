@@ -57,7 +57,7 @@
                     </div>
                     <div class="contatti">
                         <ul class="p-0">
-                            <li :class="(contacts[currentIndex].visible === false) ? 'd-none' : ''" class="p-2 d-flex justify-content-between align-items-center bg-light"
+                            <li :class="(element.visible === false) ? 'd-none' : ''" class="p-2 d-flex justify-content-between align-items-center bg-light"
                                 v-for="(element, index) in contacts" @click="messaggiContatto(index)">
                                 <div class="d-flex align-items-center">
                                     <div class="profilo-img">

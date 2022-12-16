@@ -185,7 +185,7 @@ const { crateApp } = Vue
 
         ricercaContatti(){
             for(let i = 0; i < this.contacts.length; i++){
-                if(this.contacts[i].name.includes(this.ricerca)){
+                if(this.contacts[i].name.toLowerCase().includes(this.ricerca.toLowerCase())){
                     this.contacts[i].visible = true;
                 } else{
                     this.contacts[i].visible = false;
