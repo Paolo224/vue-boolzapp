@@ -113,7 +113,7 @@
                     <div class="zona-messaggi px-5 py-2">
                         <div v-for="message, index in contacts[currentIndex].messages" class="message d-flex justify-content-between align-items-center" :class="message.status === 'sent' ? 'message-sent' : 'message-receive'">
                             {{message.message}} <i class="fa-solid fa-angle-down" @click="infoMenu(index)"></i>
-                            <div class="info display_off">
+                            <div class="info" :class="(messCurrentIndex == index) ? 'display_off' : ''">
                                 <p class="m-0 p-1">
                                     Info messaggio
                                 </p>

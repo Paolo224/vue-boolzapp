@@ -5,6 +5,7 @@ const { crateApp } = Vue
         return {
             ricerca : '',
             newMess : '',
+            messCurrentIndex : 0,
             currentIndex : 0,
             contacts: [
                 {
@@ -194,9 +195,8 @@ const { crateApp } = Vue
         },
 
         infoMenu(index){
-            const info = document.querySelector('div.info');
-            info.classList.toggle('display_off');
-            console.log(index)
+            this.messCurrentIndex = index;
+            console.log(this.messCurrentIndex)
         },
     }
 }).mount('#app');
