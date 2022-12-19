@@ -192,5 +192,10 @@ const { crateApp } = Vue
                 }
             }
         },
+
+        infoMenu(){
+            const info = document.querySelector('div.info');
+            info.classList.toggle('display_off')
+        },
     }
 }).mount('#app');

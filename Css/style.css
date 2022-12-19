@@ -92,6 +92,11 @@ div.ricerca{
 
 div.contatti{
     overflow-y: scroll;
+    cursor: pointer;
+}
+
+.active{
+    border-left: 2px solid black;
 }
 
 div.contatti ul li{
@@ -109,6 +114,21 @@ div.zona-messaggi{
     padding: .8rem;
     margin-bottom: .5rem;
     width: 250px;
+    position: relative;
+}
+
+div.info{
+    position: absolute;
+    width: 50%;
+    padding: .4rem;
+    background-color: #ffffff;
+    top: 85%;
+    left: 50%;
+    z-index: 2;
+}
+
+.display_off{
+    display: none;
 }
 
 .message-sent{
