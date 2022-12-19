@@ -5,7 +5,7 @@ const { crateApp } = Vue
         return {
             ricerca : '',
             newMess : '',
-            messCurrentIndex : 0,
+            messCurrentIndex : -1,
             currentIndex : 0,
             contacts: [
                 {
