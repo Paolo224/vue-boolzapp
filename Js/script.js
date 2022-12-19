@@ -193,9 +193,10 @@ const { crateApp } = Vue
             }
         },
 
-        infoMenu(){
+        infoMenu(index){
             const info = document.querySelector('div.info');
-            info.classList.toggle('display_off')
+            info.classList.toggle('display_off');
+            console.log(index)
         },
     }
 }).mount('#app');

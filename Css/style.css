@@ -119,8 +119,8 @@ div.zona-messaggi{
 
 div.info{
     position: absolute;
-    width: 50%;
     padding: .4rem;
+    width: 65%;
     background-color: #ffffff;
     top: 85%;
     left: 50%;

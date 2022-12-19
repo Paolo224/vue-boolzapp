@@ -111,10 +111,15 @@
                         </div>
                     </div>
                     <div class="zona-messaggi px-5 py-2">
-                        <div v-for="message in contacts[currentIndex].messages" class="message d-flex justify-content-between align-items-center" :class="message.status === 'sent' ? 'message-sent' : 'message-receive'">
-                            {{message.message}} <i class="fa-solid fa-angle-down" @click="infoMenu()"></i>
+                        <div v-for="message, index in contacts[currentIndex].messages" class="message d-flex justify-content-between align-items-center" :class="message.status === 'sent' ? 'message-sent' : 'message-receive'">
+                            {{message.message}} <i class="fa-solid fa-angle-down" @click="infoMenu(index)"></i>
                             <div class="info display_off">
-                                ciao
+                                <p class="m-0 p-1">
+                                    Info messaggio
+                                </p>
+                                <p class="m-0 p-1">
+                                    Elimina messaggio
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -127,17 +132,9 @@
             </div>
         </div>
 
-        </div>
-
         <!-- LINK JAVA SCRIPT -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./Js/script.js"></script>
     </body>
 
 </html>
-
-<!-- <div class="profilo d-flex justify-content-between align-items-center p-2">
-    <i class="fa-regular fa-face-smile ps-3 text-muted"></i>
-    <input class="w-100 p-1 font-size-small mx-4" type="text" placeholder="Scrivi un messaggio">
-    <i class="fa-solid fa-microphone pe-3 text-muted"></i>
-</div> -->
